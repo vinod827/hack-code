@@ -5,10 +5,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 @SpringBootApplication
 public class MythreadsApplication {
 	final static Log logger = LogFactory.getLog(MythreadsApplication.class);
@@ -27,7 +23,9 @@ public class MythreadsApplication {
     logger.info("Unencrypted text: "+unencryptText.getUnencryptedText(encryptedString));
 
 
-
+    int n = 798;
+    PrimeNumbers primaryNumbers = new PrimeNumbers();
+    logger.info("Primary number at position, "+n+" is " +primaryNumbers.findPrimaryNumber(n));
 
 		//executor.shutdown();
 		logger.info("Exiting main@MythreadsApplication");
